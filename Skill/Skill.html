@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+<title>Skill Forgez</title>
+<style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+       
+.container {
+    width: 50%;
+    margin-left: 25%;
+    align-items: center;
+    background: #ffffff;
+    padding: 30px;
+    margin-top: 1%;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+h1 {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+.point {
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+.point.show {
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+.quote {
+    opacity: 0;
+    margin-top: 20px;
+    font-style: italic;
+    animation: fadeIn 1s ease-in-out 2s forwards;
+}
+.cta {
+    opacity: 0;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #781106;
+    animation: bounceIn 5.2s ease-out 2s forwards;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+.logo{
+    width: 80px;
+    height: 80px;
+    border: 2px solid rgb(241, 12, 12);
+}
+.nav {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow: hidden;
+    display: flex;
+}
+
+.header {
+    background: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 20px 40px;
+    text-align: center;
+    border-bottom: 3px solid #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeSlideIn 1.2s ease-out forwards;
+}
+
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content {
+    padding-top: 100px;
+    text-align: center;
+    color: #a81010;
+    font-size: 20px;
+  
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideIn {
+    from { transform: translateX(-30px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+@keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}
+.button-container {
+    text-align: center;
+}
+
+.custom-button {
+    background-color: #0088cc; /* Telegram's blue color */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    margin-top: 5%;
+    
+}
+
+.custom-button:hover {
+    background-color: #00698f; /* Darker blue on hover */
+}
+
+.custom-button:active {
+    transform: translateY(2px);
+}
+
+.custom-button img {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+@media (max-width: 600px) {
+            .header {
+                font-size: 18px;
+                padding: 12px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            .point {
+                font-size: 14px;
+            }
+            .container{
+                width: 80%;
+                margin-left: 10%;
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="header">Skill Forgez Force of Knowledge</div>
+        <div class="logo"><img class="logos" src="https://media-maa2-2.cdn.whatsapp.net/v/t61.24694-24/432643869_547242141274101_5122969679939048957_n.jpg?ccb=11-4&oh=01_Q5AaIRf537rhED3ZLY3zZsY6M3ut_kyPWmGHt0T-ettFFVV9&oe=67E65228&_nc_sid=5e03e0&_nc_cat=101" alt=""></div>
+      
+    </div>
+    <div class="content">Welcome to Skill Forgez!</div>
+    <div class="container">
+        <h1>Master the Market Like a Pro!</h1>
+        <div class="point"> ✅Learn technical and fundamental analysis</div>
+        <div class="point"> ✅Manage your risks like a pro</div>
+        <div class="point"> ✅Stick to your strategy</div>
+        <div class="point"> ✅Stay disciplined — even when it’s tough</div>
+        <div class="point"> ✅Trust the process — profits will follow</div>
+        <div class="quote">💼 "Consistency over perfection — that’s the secret to trading success!"</div>
+        <div class="cta">👉 Ready to master the market? Start today! 💯</div>
+        </div>
+        <div class="button-container">
+            <a href="https://t.me/yourgroup" target="_blank">
+                <button class="custom-button">
+                    <a href="https://web.telegram.org/a/#-1002462337119" style="text-decoration: none;color:white;">JOIN US ON TELEGRAM</a>
+                    
+                </button>
+            </a>
+        </div>
+        
+        <script>
+        window.onload = function() {
+            const points = document.querySelectorAll('.point');
+            points.forEach((point, index) => {
+                setTimeout(() => {
+                    point.classList.add('show');
+                }, index * 500);
+            });
+        };
+        </script>>
+</body>
+</html>
